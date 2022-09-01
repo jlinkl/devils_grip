@@ -1,12 +1,21 @@
 # Devil's Grip is a cardgame that plays similar to solitaire, with a more complex rule set.
 
-You will need node.js installed to be able to run this app locally: https://nodejs.org/en/
+To run the client and server files, you will need node.js installed: https://nodejs.org/en/
 
-Once node is installed, you can run "npm install" in both the client and server files.
+Afterwards in the client file you will need to run in the terminal:
 
-In the server file, you will also need to run "npm run seeds" to setup the leaderboard database, and "npm run server:dev:" to host the server locally.
+```
+npm install
+npm start
+```
 
-In the client file, you just need to run "npm start" to start the server.
+And in the server file:
+
+```
+npm install
+npm run seeds
+npm run server:dev
+```
 
 On the home page for Devil's Grip, there should be a start game option, a difficulty drop down menu, and a ruleset at the bottom.  Clicking on start game will create a deck using a deck api, and will load 24 cards into a grid, which is stored in a 3d array.  From here you can choose 2 cards to either swap, or stack by clicking on them.  If the first card clicked is stackable onto the second card, they will stack, otherwise they will swap.  Empty spaces are automatically filled from the deck.  Clicking on the deck draws 3 cards into your talon, with which you can stack onto cards on the grid.  If you fully empty the deck by repeatedly drawing from it into the talon, the talon is flipped over and becomes the deck.  The cards remain in the same order.  The end goal is to have every card held in the grid, with no cards remaining in the deck/talon.
 
